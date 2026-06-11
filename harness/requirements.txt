@@ -1,3 +1,6 @@
-jiwer>=3.0.0
-soundfile>=0.12.1
-
+# Python 3.11 is recommended for ASR backend compatibility on Windows.
+vosk>=0.3.40
+requests>=2.31.0
+tqdm>=4.66.0
+srt>=3.5.3
+websockets>=12.0
