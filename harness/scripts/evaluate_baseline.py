@@ -86,6 +86,8 @@ def main() -> None:
         )
     except BackendDependencyError as exc:
         raise SystemExit(str(exc)) from exc
+    except Exception as exc:
+        raise SystemExit(f"{type(exc).__name__}: {exc}") from exc
 
     print(json.dumps(summary.__dict__, ensure_ascii=False, indent=2))
     print(f"predictions: {prediction_path.relative_to(ROOT)}")

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import contextlib
+import io
 from pathlib import Path
 from typing import Any
 
@@ -14,10 +16,12 @@ class FunASRBackend:
             raise BackendDependencyError("FunASR backend requires package: funasr") from exc
 
         self.model_name = model_name
-        self._model = AutoModel(model=str(model_path), device=device)
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            self._model = AutoModel(model=str(model_path), device=device, disable_update=True)
 
     def transcribe(self, wav_path: Path) -> ASRResult:
-        raw = self._model.generate(input=str(wav_path))
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            raw = self._model.generate(input=str(wav_path))
         return ASRResult(text=_extract_text(raw), raw=raw)
 
 
@@ -33,4 +37,3 @@ def _extract_text(raw: Any) -> str:
         texts = [_extract_text(item) for item in raw]
         return "".join(texts)
     return str(raw)
-

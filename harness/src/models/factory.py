@@ -5,6 +5,8 @@ from pathlib import Path
 from harness.src.models.base import ASRBackend
 from harness.src.models.funasr_backend import FunASRBackend
 from harness.src.models.registry import load_model_registry, resolve_model_path
+from harness.src.models.sherpa_backend import SherpaOnnxParaformerBackend
+from harness.src.models.transformers_backend import TransformersASRBackend
 from harness.src.models.vosk_backend import VoskBackend
 from harness.src.models.whisper_backend import TransformersWhisperBackend
 
@@ -32,5 +34,8 @@ def create_backend(
         return VoskBackend(model_name, model_path, device=device)
     if model_type == "transformers-whisper":
         return TransformersWhisperBackend(model_name, model_path, device=device)
+    if model_type == "transformers":
+        return TransformersASRBackend(model_name, model_path, device=device)
+    if model_type == "sherpa-onnx":
+        return SherpaOnnxParaformerBackend(model_name, model_path, device=device)
     raise NotImplementedError(f"No baseline backend implemented for model type: {model_type}")
-

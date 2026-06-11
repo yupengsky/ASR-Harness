@@ -1,6 +1,17 @@
 # Python 3.11 is recommended for ASR backend compatibility on Windows.
+# Install CUDA PyTorch first on this machine:
+#   python -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
 vosk>=0.3.40
 requests>=2.31.0
 tqdm>=4.66.0
 srt>=3.5.3
 websockets>=12.0
+numpy>=2.0.0
+soundfile>=0.12.1
+scipy>=1.11.0
+pyyaml>=6.0.0
+torch>=2.11.0
+torchaudio>=2.11.0
+funasr>=1.3.9
+transformers>=5.11.0
+sherpa-onnx>=1.13.2
