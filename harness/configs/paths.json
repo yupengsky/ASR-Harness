@@ -1,0 +1,8 @@
+{
+  "project_root": ".",
+  "raw_thchs30_dir": "data/raw/thchs30/data_thchs30",
+  "manifest_root": "data/manifests",
+  "model_root": "models",
+  "output_root": "outputs"
+}
+

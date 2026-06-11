@@ -1,0 +1,56 @@
+{
+  "paraformer-zh": {
+    "path": "models/paraformer-zh",
+    "type": "funasr",
+    "priority": "primary"
+  },
+  "sensevoice-small": {
+    "path": "models/sensevoice-small",
+    "type": "funasr",
+    "priority": "primary"
+  },
+  "whisper-tiny": {
+    "path": "models/whisper-tiny",
+    "type": "transformers-whisper",
+    "priority": "baseline"
+  },
+  "whisper-base": {
+    "path": "models/whisper-base",
+    "type": "transformers-whisper",
+    "priority": "baseline"
+  },
+  "whisper-small": {
+    "path": "models/whisper-small",
+    "type": "transformers-whisper",
+    "priority": "baseline"
+  },
+  "vosk-small": {
+    "path": "models/vosk/vosk-model-small-cn-0.22",
+    "type": "vosk",
+    "priority": "baseline"
+  },
+  "vosk-full": {
+    "path": "models/vosk/vosk-model-cn-0.22",
+    "type": "vosk",
+    "priority": "baseline"
+  },
+  "moonshine-tiny-zh": {
+    "path": "models/moonshine-tiny-zh",
+    "type": "transformers",
+    "priority": "optional"
+  },
+  "sherpa-onnx-paraformer-zh-small": {
+    "path": "models/sherpa-onnx-paraformer-zh-small",
+    "type": "sherpa-onnx",
+    "priority": "optional"
+  },
+  "qwen3-asr-0.6b": {
+    "path": "models/qwen3-asr-0.6b",
+    "legacy_paths": [
+      "models/qwen3-ASR-0.6B"
+    ],
+    "type": "transformers",
+    "priority": "optional"
+  }
+}
+
