@@ -1,0 +1,25 @@
+{
+  "phrase_replacements": [
+    {
+      "from": "寒电位于",
+      "to": "韩电位于",
+      "reason": "domain entity candidate supported by qwen3-asr-0.6b"
+    },
+    {
+      "from": "云南成贡训练基地",
+      "to": "云南呈贡训练基地",
+      "reason": "official lexicon contains 呈贡 and lower ASR candidates support it"
+    },
+    {
+      "from": "它易被用来",
+      "to": "它亦被用来",
+      "reason": "alternative candidate supported by paraformer pair and official word LM contains 亦 被"
+    },
+    {
+      "from": "银行流程比例",
+      "to": "银行留成比例",
+      "reason": "alternative candidate supported by paraformer pair in banking context"
+    }
+  ],
+  "enable_supported_suffix_completion": true
+}

@@ -1,0 +1,120 @@
+{
+  "source": "outputs\\representative100\\harness_v3\\oracle\\predictions.jsonl",
+  "anchor": "qwen3-asr-1.7b",
+  "context": 2,
+  "max_candidate_distance": 4,
+  "min_gain": 1,
+  "contextual_replacements": [
+    {
+      "left": "银行",
+      "from": "流程",
+      "to": "留成",
+      "right": "比例",
+      "support": 4,
+      "examples": [
+        {
+          "utt_id": "D7_834",
+          "candidate": "paraformer-baseline",
+          "anchor_distance": 4,
+          "candidate_distance": 0
+        },
+        {
+          "utt_id": "D7_834",
+          "candidate": "paraformer-baseline",
+          "anchor_distance": 4,
+          "candidate_distance": 0
+        },
+        {
+          "utt_id": "D7_834",
+          "candidate": "paraformer-harness-v1-margin015",
+          "anchor_distance": 4,
+          "candidate_distance": 0
+        },
+        {
+          "utt_id": "D7_834",
+          "candidate": "paraformer-harness-v1-margin015",
+          "anchor_distance": 4,
+          "candidate_distance": 0
+        }
+      ]
+    },
+    {
+      "left": "云南",
+      "from": "成",
+      "to": "呈",
+      "right": "贡训",
+      "support": 2,
+      "examples": [
+        {
+          "utt_id": "D4_817",
+          "candidate": "paraformer-baseline",
+          "anchor_distance": 1,
+          "candidate_distance": 0
+        },
+        {
+          "utt_id": "D4_817",
+          "candidate": "paraformer-harness-v1-margin015",
+          "anchor_distance": 1,
+          "candidate_distance": 0
+        }
+      ]
+    },
+    {
+      "left": "以它",
+      "from": "易",
+      "to": "亦",
+      "right": "被用",
+      "support": 2,
+      "examples": [
+        {
+          "utt_id": "D4_949",
+          "candidate": "paraformer-baseline",
+          "anchor_distance": 2,
+          "candidate_distance": 1
+        },
+        {
+          "utt_id": "D4_949",
+          "candidate": "paraformer-harness-v1-margin015",
+          "anchor_distance": 2,
+          "candidate_distance": 1
+        }
+      ]
+    },
+    {
+      "left": "着那",
+      "from": "",
+      "to": "片",
+      "right": "",
+      "support": 2,
+      "examples": [
+        {
+          "utt_id": "D13_871",
+          "candidate": "paraformer-baseline",
+          "anchor_distance": 2,
+          "candidate_distance": 1
+        },
+        {
+          "utt_id": "D13_871",
+          "candidate": "paraformer-harness-v1-margin015",
+          "anchor_distance": 2,
+          "candidate_distance": 1
+        }
+      ]
+    },
+    {
+      "left": "",
+      "from": "寒",
+      "to": "韩",
+      "right": "电位",
+      "support": 1,
+      "examples": [
+        {
+          "utt_id": "D12_981",
+          "candidate": "qwen3-asr-0.6b",
+          "anchor_distance": 1,
+          "candidate_distance": 0
+        }
+      ]
+    }
+  ]
+}
